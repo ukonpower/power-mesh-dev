@@ -45,8 +45,8 @@ export class MainScene extends ORE.BaseLayer {
 		folScene.addInput( this.params, 'gltf', { options: {
 			DamagedHelmet: './assets/gltf/2.0/DamagedHelmet/glTF-Binary/DamagedHelmet.glb',
 			FlightHelmet: './assets/gltf/2.0/FlightHelmet/glTF/FlightHelmet.gltf',
-			MetalRoughSpheresNoTextures: './assets/gltf/2.0/MetalRoughSpheresNoTextures/glTF-Binary/MetalRoughSpheresNoTextures.glb',
 			MetalRoughSpheres: './assets/gltf/2.0/MetalRoughSpheres/glTF-Binary/MetalRoughSpheres.glb',
+			MetalRoughSpheresNoTextures: './assets/gltf/2.0/MetalRoughSpheresNoTextures/glTF-Binary/MetalRoughSpheresNoTextures.glb',
 			NormalTangentTest: './assets/gltf/2.0/NormalTangentTest/glTF-Binary/NormalTangentTest.glb',
 			EnvironmentTest: './assets/gltf/2.0/EnvironmentTest/glTF/EnvironmentTest.gltf',
 			Shadow: './assets/gltf_power/shadow.glb',

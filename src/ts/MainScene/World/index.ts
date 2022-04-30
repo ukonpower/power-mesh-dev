@@ -37,7 +37,7 @@ export class World extends THREE.Object3D {
 		// light.castShadow = true;
 		// light.position.set( 5.0, 5.0, 5.0 );
 		// light.shadow.bias = - 0.001;
-		// light.intensity = 0;
+		// light.intensity = 1;
 		// this.add( light );
 
 		/*-------------------------------
@@ -83,12 +83,16 @@ export class World extends THREE.Object3D {
 						uniforms: this.commonUniforms
 					} );
 
+					powerMesh.position.copy( mesh.position );
+					powerMesh.rotation.copy( mesh.rotation );
+					powerMesh.scale.copy( mesh.scale );
+
 					powerMesh.castShadow = true;
 					powerMesh.receiveShadow = true;
 
 					if ( this.envMap ) {
 
-						powerMesh.updateEnvMap( null );
+						powerMesh.updateEnvMap( this.envMap );
 
 					}
 
@@ -101,6 +105,8 @@ export class World extends THREE.Object3D {
 						this.powerMeshList.push( powerMesh );
 
 					}
+
+					this.powerMeshList.push( powerMesh );
 
 					mesh.visible = false;
 
@@ -173,7 +179,7 @@ export class World extends THREE.Object3D {
 
 			this.powerMeshList.forEach( mesh => {
 
-				mesh.updateEnvMap( null );
+				mesh.updateEnvMap( this.envMap );
 
 			} );
 
