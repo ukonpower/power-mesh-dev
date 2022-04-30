@@ -2,6 +2,7 @@ module.exports = {
 	watch: true,
 	watchOptions: {
 		aggregateTimeout: 100,
+		poll: 500
 	},
     mode: 'development',
     entry: {
@@ -34,7 +35,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: [".ts", ".js"]
+        extensions: [".ts", ".js", '.d.ts']
 	},
 	cache: {
 		type: 'filesystem',

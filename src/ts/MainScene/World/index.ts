@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import * as ORE from 'ore-three-ts';
 
-import { PowerMesh } from 'powermesh';
+import { PowerMesh } from 'power-mesh';
 
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import CameraControls from 'camera-controls';
@@ -81,7 +81,7 @@ export class World extends THREE.Object3D {
 
 					let powerMesh = new PowerMesh( mesh, {
 						uniforms: this.commonUniforms
-					} );
+					}, true );
 
 					powerMesh.position.copy( mesh.position );
 					powerMesh.rotation.copy( mesh.rotation );

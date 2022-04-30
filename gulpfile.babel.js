@@ -133,9 +133,11 @@ const buildSass = () => {
 const copy = ( c ) => {
 	
 	gulp.src( [srcDir + '/html/**/*'] ).pipe( gulp.dest( outDir ) );
-	gulp.src( [srcDir + '/assets/**/*'] ).pipe( gulp.dest( outDir + '/assets/' ) );
-	
-	c();
+	gulp.src( [srcDir + '/assets/**/*'] ).pipe( gulp.dest( outDir + '/assets/' ) ).on('end', () => {
+
+		c();
+		
+	});
 	
 }
 
